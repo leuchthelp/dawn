@@ -17,8 +17,8 @@ use burn::{
     tensor::{Bytes, TensorCreationOptions, TensorData},
 };
 use colorgrad::Gradient;
-use image::{ConvertColorOptions, DynamicImage, metadata::Cicp};
-use jiff::{Span, Timestamp, ToSpan};
+use image::DynamicImage;
+use jiff::ToSpan;
 use opendal::{Operator, services::Gcs};
 use zarrs::{
     array::{Array, data_type::Float32DataType},

@@ -44,6 +44,7 @@ dependencies:
   flutter_hooks: ^0.21.3+1
   riverpod_annotation: ^4.0.7
   flutter_riverpod: ^3.4.3
+  flutter_scene: ^0.24.6
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +70,22 @@ flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
+  assets:
+    - flutter_scene_generated/
+    - path: flutter_scene_generated/metal_ios/
+      platforms:
+        - ios
+    - path: flutter_scene_generated/metal_desktop/
+      platforms:
+        - macos
+    - path: flutter_scene_generated/opengl_es_vulkan/
+      platforms:
+        - android
+        - linux
+        - windows
+    - path: flutter_scene_generated/opengl_es/
+      platforms:
+        - web
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
