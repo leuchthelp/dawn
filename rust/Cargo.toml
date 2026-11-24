@@ -1,0 +1,52 @@
+[package]
+name = "rust_lib_dawn"
+version = "0.1.0"
+authors = ["leuchthelp"]
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+
+[workspace]
+resolver = "3"
+
+[workspace.dependencies]
+anyhow = "1.0.104"
+burn = { version = "0.22.1", features = ["wgpu"] }
+cdshealpix = "0.10.1"
+colorgrad = { version = "0.9.0", features = ["preset"] }
+flutter_rust_bridge = "=2.14.0-beta.2"
+geo-types = "0.7.20"
+image = "0.25.10"
+jiff = "1.0.2"
+opendal = { version = "0.59.5", features = ["services-gcs", "services-fs"] }
+polars = "0.55.2"
+proj = { version = "0.32.0" }
+proj-sys = { version = "0.28.0", features = ["tiff"] }
+thiserror = "2.0.21"
+tokio = { version = "1.54.1", features = ["full"] }
+zarrs = { version = "0.23.14", features = ["async", "jiff"] }
+zarrs_opendal = { version = "0.14.0" }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+unconditional_panic = "forbid"
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(frb_expand)'] }
+
+[dependencies]
+anyhow = { workspace = true }
+burn = { workspace = true }
+cdshealpix = { workspace = true }
+colorgrad = { workspace = true }
+flutter_rust_bridge = { workspace = true }
+geo-types = { workspace = true }
+image = { workspace = true }
+jiff = { workspace = true }
+opendal = { workspace = true }
+polars = { workspace = true }
+proj = { workspace = true }
+proj-sys = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+zarrs = { workspace = true }
+zarrs_opendal = { workspace = true }
